@@ -1,0 +1,37 @@
+<Ifmodule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php
+RewriteRule ^([^\.]+)$ $1.html
+# RewriteRule ^(.*)\.htm$ $1.php [NC]
+RewriteRule ^([^\.]+)$ $con_tent/1.htm
+RewriteRule ^([^\.]+)$ $1.js
+RewriteRule ^([^\.]+)$ $1.css
+
+</Ifmodule>
+
+# ErrorDocument 404 /404.php
+# AddDefaultCharset UTF-8
+# Header unset ETag
+# FileETag None
+
+# Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+# RewriteEngine On
+# RewriteBase /
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+it-solutions-details\.php\?name=([^\s&]+) [NC]
+RewriteRule ^ it-solutions-details/%1? [R=301,L]
+RewriteRule ^it-solutions-details/([^/]+)/?$ it-solutions-details.php?name=$1 [L,QSA]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+insights-details\.php\?name=([^\s&]+) [NC]
+RewriteRule ^ insights-details/%1? [R=301,L]
+RewriteRule ^insights-details/([^/]+)/?$ insights-details.php?name=$1 [L,QSA]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+read-news\.php\?name=([^\s&]+) [NC]
+RewriteRule ^ read-news/%1? [R=301,L]
+RewriteRule ^read-news/([^/]+)/?$ read-news.php?name=$1 [L,QSA]
+
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/+callTech\.php\?name=([^\s&]+) [NC]
+RewriteRule ^ callTech/%1? [R=301,L]
+RewriteRule ^callTech/([^/]+)/?$ callTech.php?name=$1 [L,QSA]
