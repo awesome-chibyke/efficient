@@ -9,8 +9,8 @@ class Firebase extends Model
 {
     use HasFactory;
 
-    const FIREBASE_API_KEY = 'AAAAVB5mPFM:APA91bF0XAMJsSuFxO1Oi31esAnLAoYcFyCiO6tJfx6l03jk7Ywfq8KyVXxv-VLVv0nyGOdoOkbM4NCZM14y1lhinUUGRFqghBmcuyLjU7D7UHfTRQYM8IhFjB8JU6LxRvEpooIAwqii';
-    //AAAA7fj7X-k:APA91bHVXF_Pc4K0YxU5cLD9Bqxot7kkbUNdOzRfTkFuEzU7eS98Pq8KaLdFenpMV5pxXhW6yvDb_ZXNFW_CKGJ1gTWh-FLzUtJl44SlhrCu3NCcYZ8umDR0PK7_TzxKI79XzjapGJnu
+    const FIREBASE_API_KEY = '';
+ 
 
     // sending push message to single user by firebase reg id
     public STATIC function send($to, $message) {
