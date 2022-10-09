@@ -175,7 +175,7 @@ class LoginAuthenticator extends Controller
             $settings = $appSettings->getSingleModel();
             $siteName = $settings->site_name;
 
-            $api_key = env('SMS_SECRET', 'mdLcSDILeVMX6PFDUOmB62URpcCbJwJiY0TIFAolMARXvR28dAeM6HVhCTOI');
+            $api_key = env('SMS_SECRET', '');
 
             $message = 'Hi '.$user->name.' We have detected a login attempt to your '.$settings->site_name.' account. Please enter code below to confirm login request. Code : '.$loginAuthCheck->code;
 
